@@ -1,6 +1,35 @@
 body{
-    background-color: black;
+    /*background-color: black;*/
     margin:0;
     padding:0;
+   /* background: #0f0c29;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000046 , #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #000046 , #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     
+}
+#headimg1{
+    height: 600px;
+}
+.align-items-end {
+    align-items: flex-end!important;
+    height: 596px;
+    padding-left: 38px;
+}
+
+img#headimg1 {
+    height: 1123px;
+}
+img.card-img-top {
+    height: 338px;
+    padding: 10px 7px;
+    border-radius: 33px;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    height: 214px;
 }
