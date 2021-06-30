@@ -2,6 +2,7 @@ $("document").ready(function(){
     $.ajax({
         url:"https://newsapi.org/v2/top-headlines?country=in&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
         success:function(data){
+            console.log(data);
 
             $("#Line1").text(data.articles[1].title);
             $("#Line2").text(data.articles[2].title);
@@ -38,7 +39,8 @@ $("document").ready(function(){
                     <div class="card-body">
                         <h5 class="card-title">${data.articles[i].title}</h5>
                         <p class="card-text">${data.articles[i].description}</p>
-                        <a href="${data.articles[i].url}" class="btn btn-primary">Go To Main Article</a>
+                        
+                        <a href="${data.articles[i].url}" class="stretched-link"></a>
                     </div>
                 </div>
                 </div>
@@ -77,7 +79,7 @@ $("document").ready(function(){
                     <div class="card-body">
                         <h5 class="card-title">${data1.articles[i].title}</h5>
                         <p class="card-text">${data1.articles[i].description}</p>
-                        <a href="${data1.articles[i].url}" class="btn btn-primary">Go To Main Article</a>
+                         <a href="${data1.articles[i].url}" class="stretched-link"></a>
                     </div>
                 </div>
                 </div>
@@ -113,13 +115,14 @@ $("document").ready(function(){
                     <div class="card-body">
                         <h5 class="card-title">${data2.articles[i].title}</h5>
                         <p class="card-text">${data2.articles[i].description}</p>
-                        <a href="${data2.articles[i].url}" class="btn btn-primary">Go To Main Article</a>
+                        
+                        <a href="${data2.articles[i].url}" class="stretched-link"></a>
                     </div>
                 </div>
                 </div>
             </div>
                 `;
-                $('#briefrow3').html(`
+                $('#briefrow2').html(`
                 ${blobtwo}
                 `)
 
@@ -128,6 +131,133 @@ $("document").ready(function(){
 
         }
     })
+    $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?language=en&category=business&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data3){
+                console.log(data3);
+                let blobtwo =""
+                for(let i=6;i<10;i++){
+
+
+                    blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data3.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data3.articles[i].title}</h5>
+                        <p class="card-text">${data3.articles[i].description}</p>
+                         <a href="${data3.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                    $('#briefrow3').html(`
+                ${blobtwo}
+                `)
+
+
+                }
+
+            }
+        })
+    $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?language=en&category=technology&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data4){
+                console.log(data4);
+                let blobtwo =""
+                for(let i=6;i<10;i++){
+
+
+                    blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data4.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data4.articles[i].title}</h5>
+                        <p class="card-text">${data4.articles[i].description}</p>
+                         <a href="${data4.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                    $('#briefrow4').html(`
+                ${blobtwo}
+                `)
+
+
+                }
+
+            }
+        })
+    $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?language=en&category=sports&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data5){
+                console.log(data5);
+                let blobtwo =""
+                for(let i=1;i<5 ;i++){
+
+
+                    blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data5.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data5.articles[i].title}</h5>
+                        <p class="card-text">${data5.articles[i].description}</p>
+                         <a href="${data5.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                    $('#briefrow5').html(`
+                ${blobtwo}
+                `)
+
+
+                }
+
+            }
+        })
+    $.ajax({
+        url:"https://newsapi.org/v2/top-headlines?language=en&category=entertainment&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+        success:function(data6){
+
+            let blobtwo =""
+            for(let i=0;i<4 ;i++){
+
+
+                blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data6.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data6.articles[i].title}</h5>
+                        <p class="card-text">${data6.articles[i].description}</p>
+                         <a href="${data6.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                $('#briefrow6').html(`
+                ${blobtwo}
+                `)
+
+
+            }
+
+        }
+    })
+
+
+
 
     }
 )

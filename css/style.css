@@ -14,11 +14,7 @@ background: linear-gradient(to left, #000046 , #1CB5E0, #000046); /* W3C, IE 10+
 #headimg1{
     height: 600px;
 }
-.align-items-end {
-    align-items: flex-end!important;
-    height: 596px;
-    padding-left: 38px;
-}
+
 
 img#headimg1 {
     height: 1123px;
