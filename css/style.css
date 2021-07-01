@@ -2,9 +2,6 @@ body{
     /*background-color: black;*/
     margin:0;
     padding:0;
-   /* background: #0f0c29;  /* fallback for old browsers */
-/*background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-/*background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 background: #000046;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #000046 , #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #000046 , #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -16,12 +13,12 @@ background: linear-gradient(to left, #000046 , #1CB5E0, #000046); /* W3C, IE 10+
 }
 .align-items-end {
     align-items: flex-end!important;
-    height: 596px;
+    height: 637px;
     padding-left: 38px;
 }
 
 img#headimg1 {
-    height: 1123px;
+    height: 686px;
 }
 img.card-img-top {
     height: 338px;
@@ -32,4 +29,43 @@ img.card-img-top {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     height: 214px;
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    padding-left: 26px;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.6667%;
+    padding-left: 70px;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    background: #000000d0;
+    border-radius: 7px;
+    text-align: center;
+}
+.bg-primary {
+    background-color: rgb(2, 30, 73) !important;
+}
+.h6, h6 {
+    font-size: 1.25rem;
+    background:#000000d0 ;
+    border-radius: 7px;
+    padding: 8px;
+    
+}
+.card-text:last-child {
+    margin-bottom: 0;
+    background: #000000d0;
+    border-radius: 8px;
+    padding: 7px;
+    margin-left: 6px;
 }
