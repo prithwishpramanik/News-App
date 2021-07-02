@@ -255,6 +255,68 @@ $("document").ready(function(){
 
             }
         })
+    $.ajax({
+        url:"https://newsapi.org/v2/top-headlines?language=en&category=health&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+        success:function(data7){
+
+            let blobtwo =""
+            for(let i=0;i<4 ;i++){
+
+
+                blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data7.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data7.articles[i].title}</h5>
+                        <p class="card-text">${data7.articles[i].description}</p>
+                         <a href="${data7.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                $('#briefrow7').html(`
+                ${blobtwo}
+                `)
+
+
+            }
+
+        }
+    })
+    $.ajax({
+        url:"https://newsapi.org/v2/top-headlines?language=en&category=science&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+        success:function(data8){
+
+            let blobtwo =""
+            for(let i=0;i<4 ;i++){
+
+
+                blobtwo= blobtwo + `
+                <div class="col-6">
+                <div class="p-3">
+                    <div class="card" style="width: fit-content;">
+                    <img src=${data8.articles[i].urlToImage} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${data8.articles[i].title}</h5>
+                        <p class="card-text">${data8.articles[i].description}</p>
+                         <a href="${data8.articles[i].url}" class="stretched-link"></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+                `;
+                $('#briefrow8').html(`
+                ${blobtwo}
+                `)
+
+
+            }
+
+        }
+    })
 
 
 
