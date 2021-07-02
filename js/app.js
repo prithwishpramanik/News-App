@@ -1,37 +1,37 @@
 $("document").ready(function(){
-    $.ajax({
-        url:"https://newsapi.org/v2/top-headlines?country=in&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
-        success:function(data){
-            console.log(data);
+        $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?country=in&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data){
+                console.log(data);
 
-            $("#Line1").text(data.articles[1].title);
-            $("#Line2").text(data.articles[2].title);
-            $("#Line3").text(data.articles[3].title);
-            $("#des1").text(data.articles[1].description);
-            $("#des2").text(data.articles[2].description);
-            $("#des3").text(data.articles[3].description);
-            $("#img1").attr("src",data.articles[1].urlToImage);
-            $("#img2").attr("src",data.articles[2].urlToImage);
-            $("#img3").attr("src",data.articles[3].urlToImage);
-            $("#card1").attr("href",data.articles[5].url);
-            $("#card2").attr("href",data.articles[5].url);
-            $("#title1").text(data.articles[4].title);
-            $("#title2").text(data.articles[5].title);
-            $("#para1").text(data.articles[4].description);
-            $("#para2").text(data.articles[5].description);
+                $("#Line1").text(data.articles[1].title);
+                $("#Line2").text(data.articles[2].title);
+                $("#Line3").text(data.articles[3].title);
+                $("#des1").text(data.articles[1].description);
+                $("#des2").text(data.articles[2].description);
+                $("#des3").text(data.articles[3].description);
+                $("#img1").attr("src",data.articles[1].urlToImage);
+                $("#img2").attr("src",data.articles[2].urlToImage);
+                $("#img3").attr("src",data.articles[3].urlToImage);
+                $("#card1").attr("href",data.articles[5].url);
+                $("#card2").attr("href",data.articles[5].url);
+                $("#title1").text(data.articles[4].title);
+                $("#title2").text(data.articles[5].title);
+                $("#para1").text(data.articles[4].description);
+                $("#para2").text(data.articles[5].description);
 
-            $("#img4").attr("src",data.articles[4].urlToImage);
-            $("#img5").attr("src",data.articles[5].urlToImage);
+                $("#img4").attr("src",data.articles[4].urlToImage);
+                $("#img5").attr("src",data.articles[5].urlToImage);
 
-            $("#headline").text(data.articles[0].description);
-            $("#headimg1").attr("src",data.articles[0].urlToImage);
-            $('#time').text("Published At:-" +data.articles[0].publishedAt);
+                $("#headline").text(data.articles[0].description);
+                $("#headimg1").attr("src",data.articles[0].urlToImage);
+                $('#time').text("Published At:-" +data.articles[0].publishedAt);
 
-            let blobone =""
-            for(let i=6;i<10;i++){
+                let blobone =""
+                for(let i=6;i<10;i++){
 
 
-                blobone= blobone + `
+                    blobone= blobone + `
                 <div class="col-6">
                 <div class="p-3">
                     <div class="card" style="width: fit-content;">
@@ -46,24 +46,24 @@ $("document").ready(function(){
                 </div>
             </div>
                 `;
-                $('#briefrow1').html(`
+                    $('#briefrow1').html(`
                 ${blobone}
                 `)
 
 
+                }
+
+
+
+
+
+
+            },
+            error:function(){
+                alert("some error occurred")
+
             }
-            
-            
-
-
-
-
-        },
-        error:function(){
-            alert("some error occurred")
-
-        }
-    })
+        })
         $.ajax({
             url:"https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
             success: function(data1){
@@ -99,15 +99,15 @@ $("document").ready(function(){
 
         })
 
-    $.ajax({
-        url:"https://newsapi.org/v2/top-headlines?language=en&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
-        success:function(data2){
-            console.log(data2);
-            let blobtwo =""
-            for(let i=6;i<10;i++){
+        $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?language=en&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data2){
+                console.log(data2);
+                let blobtwo =""
+                for(let i=6;i<10;i++){
 
 
-                blobtwo= blobtwo + `
+                    blobtwo= blobtwo + `
                 <div class="col-6">
                 <div class="p-3">
                     <div class="card" style="width: fit-content;">
@@ -122,16 +122,16 @@ $("document").ready(function(){
                 </div>
             </div>
                 `;
-                $('#briefrow2').html(`
+                    $('#briefrow2').html(`
                 ${blobtwo}
                 `)
 
 
-            }
+                }
 
-        }
-    })
-    $.ajax({
+            }
+        })
+        $.ajax({
             url:"https://newsapi.org/v2/top-headlines?language=en&category=business&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
             success:function(data3){
                 console.log(data3);
@@ -162,7 +162,7 @@ $("document").ready(function(){
 
             }
         })
-    $.ajax({
+        $.ajax({
             url:"https://newsapi.org/v2/top-headlines?language=en&category=technology&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
             success:function(data4){
                 console.log(data4);
@@ -193,7 +193,7 @@ $("document").ready(function(){
 
             }
         })
-    $.ajax({
+        $.ajax({
             url:"https://newsapi.org/v2/top-headlines?language=en&category=sports&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
             success:function(data5){
                 console.log(data5);
@@ -224,15 +224,15 @@ $("document").ready(function(){
 
             }
         })
-    $.ajax({
-        url:"https://newsapi.org/v2/top-headlines?language=en&category=entertainment&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
-        success:function(data6){
+        $.ajax({
+            url:"https://newsapi.org/v2/top-headlines?language=en&category=entertainment&apiKey=4c9228ed94db425a9b1bc3c7389ea781",
+            success:function(data6){
 
-            let blobtwo =""
-            for(let i=0;i<4 ;i++){
+                let blobtwo =""
+                for(let i=0;i<4 ;i++){
 
 
-                blobtwo= blobtwo + `
+                    blobtwo= blobtwo + `
                 <div class="col-6">
                 <div class="p-3">
                     <div class="card" style="width: fit-content;">
@@ -246,15 +246,15 @@ $("document").ready(function(){
                 </div>
             </div>
                 `;
-                $('#briefrow6').html(`
+                    $('#briefrow6').html(`
                 ${blobtwo}
                 `)
 
 
-            }
+                }
 
-        }
-    })
+            }
+        })
 
 
 
