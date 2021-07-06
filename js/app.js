@@ -94,7 +94,7 @@ $("document").ready(function(){
 
             },
             error:function(){
-                console.log(errors);
+                console.log("errors");
             }
 
         })
