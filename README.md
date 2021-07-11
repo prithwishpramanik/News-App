@@ -1,4 +1,4 @@
-# News-App📰
+# News-App📰<img src="https://img.shields.io/website?down_color=red&style=for-the-badge&url=https://prithwishpramanik.github.io/News-App" alt="counter" align="right"/>
 # About❓
 - Its a news app which gives news about different genres.
 - All news ar avvalable in english.
