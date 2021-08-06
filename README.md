@@ -1,6 +1,6 @@
 # News-App📰<img src="https://img.shields.io/website?down_color=red&style=for-the-badge&url=https://prithwishpramanik.github.io/News-App" alt="counter" align="right"/>
 # About❓
--It's a news app that gives news about different genres.
+- It's a news app that gives news about different genres.
 - All news is available in English.
 - It gives real-time top news in different sections such as education, life & style, etc.
 - News gets updated every 1 hour.
